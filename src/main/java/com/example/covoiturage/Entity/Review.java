@@ -28,10 +28,6 @@ public class Review {
     @Column(name = "review_date", updatable = false, insertable = false)
     private Timestamp reviewDate;
 
-    public Review() {
-
-    }
-
     public int getId() {
         return id;
     }
@@ -76,8 +72,8 @@ public class Review {
         return reviewDate;
     }
 
-    public void setReviewDate(Timestamp reviewDate) {
-        this.reviewDate = reviewDate;
+    public void setReviewDate() {
+        this.reviewDate = new Timestamp(System.currentTimeMillis());
     }
 }
 
